@@ -21,14 +21,16 @@ apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx g
 mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
-python3 -m venv $PROJECT_BASE_PATH/env
+python3 -m venv $PROJECT_BASE_PATH/env # PROJECT_BASE_PATH/env is the name of my virtual environment
 
 # debug
-$PROJECT_BASE_PATH/env/bin/pip install django
+#$PROJECT_BASE_PATH/env/bin/pip install django
+#$PROJECT_BASE_PATH/env/bin/pip install djangorestframework
 # debug
 
-$PROJECT_BASE_PATH/env/bin/pip install -r
-$PROJECT_BASE_PATH/requirements.txt uwsgi==2.0.21
+$PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt uwsgi==2.0.21 # -r needs one argument
+# install all packages listed in requirements.txt, i.e., django and djangorestframework
+
 
 # Run migrations
 cd $PROJECT_BASE_PATH
