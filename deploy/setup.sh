@@ -14,8 +14,8 @@ locale-gen en_GB.UTF-8
 echo "Installing dependencies..."
 apt-get update
 
-
-apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx git
+# debug
+apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx git django
 
 
 mkdir -p $PROJECT_BASE_PATH
