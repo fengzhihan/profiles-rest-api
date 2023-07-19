@@ -15,7 +15,7 @@ echo "Installing dependencies..."
 apt-get update
 
 # debug
-apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx git django
+apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx git python3-django
 
 
 mkdir -p $PROJECT_BASE_PATH
